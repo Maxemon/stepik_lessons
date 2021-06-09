@@ -2,7 +2,7 @@ from selenium.webdriver.support import expected_conditions as exp
 from selenium.webdriver.common.by import By
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
-button = "By.CLASS_NAME", "btn-add-to-basket"
+button = By.CLASS_NAME, "btn-add-to-basket"
 expected_button_text = {
     "ru": "Добавить в корзину",
     "en-GB": "Add to basket",
