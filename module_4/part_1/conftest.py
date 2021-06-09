@@ -9,15 +9,21 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope="function")
-def browser(request):
-    language = request.config.getoption("language")
+def browser(language):
     options = Options()
     options.add_experimental_option("prefs", {"intl.accept_languages": language})
+
     if language == "ru" or language == "en-GB" or language == "es" or language == "fr":
         print(f"\nstart chrome browser for test in {language} locale")
         browser = webdriver.Chrome(options=options)
     else:
         raise pytest.UsageError("--language should be ru, en-GB, es, fr")
+
     yield browser
     print("\nquit browser..")
     browser.quit()
+
+
+@pytest.fixture(scope="session")
+def language(request):
+    return request.config.getoption("language")
