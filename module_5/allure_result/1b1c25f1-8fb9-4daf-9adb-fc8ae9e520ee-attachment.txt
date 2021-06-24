@@ -1,0 +1,5 @@
+
+start chrome browser for test in en-GB locale
+No second alert presented
+
+quit browser..
