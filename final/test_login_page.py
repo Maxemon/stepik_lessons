@@ -1,3 +1,5 @@
+import pytest
+
 from final.pages.locators import LoginPageLocators
 from final.pages.login_page import LoginPage
 
@@ -6,6 +8,7 @@ existing_username = "test5@test.te"
 existing_username_password = "123456789Max"
 
 
+@pytest.mark.personal_tests
 class TestUserRegistration:
     def test_registration_of_new_user(self, browser):
         # Arrange
@@ -38,6 +41,7 @@ class TestUserRegistration:
         page.should_be_empty_field(*LoginPageLocators.REGISTRATION_PASSWORD_CONFIRM)
 
 
+@pytest.mark.personal_tests
 class TestUserLogin:
     def test_correct_user_login(self, browser):
         # Arrange

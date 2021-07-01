@@ -6,6 +6,7 @@ from final.pages.locators import CataloguePageLocators
 link = "http://selenium1py.pythonanywhere.com/ru/catalogue/"
 
 
+@pytest.mark.personal_tests
 class TestCataloguePage:
     def test_page_view(self, browser):
         # Arrange
@@ -32,6 +33,7 @@ class TestCataloguePage:
         page.check_message_about_adding()
 
     # Не придумал как пощёлкать дерево категорий. Все функции есть, а как передать им локаторы чёт не дошло.
+    @pytest.mark.personal_tests
     @pytest.mark.skip
     @pytest.mark.parametrize('locator',
                              [*CataloguePageLocators.LINK_TO_CLOTHING,
