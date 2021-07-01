@@ -24,6 +24,7 @@ class TestUserRegistration:
         page.should_be_authorized_user()
         page.should_be_success_login_message()
 
+    @pytest.mark.xfail
     def test_registration_of_existing_user(self, browser):
         # Arrange
         page = LoginPage(browser, link)
