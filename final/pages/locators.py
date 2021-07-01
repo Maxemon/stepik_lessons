@@ -38,3 +38,29 @@ class BasePageLocators:
 class BasketPageLocators:
     SMTH_IN_BASKET = (By.CSS_SELECTOR, ".basket_summary")
     EMPTY_BASKET_MESSAGE = (By.CSS_SELECTOR, "#content_inner > p")
+
+
+class CataloguePageLocators:
+    CATEGORY_TREE = (By.CSS_SELECTOR, ".side_categories")
+
+    SELECTED_CATEGORY = (By.CSS_SELECTOR, ".page-header h1")
+
+    PRODUCTS_QTY = (By.CSS_SELECTOR, ".form-horizontal")
+
+    PRODUCT_NAME = (By.CSS_SELECTOR, ".product_pod h3")
+    PRODUCT_STATUS = (By.CSS_SELECTOR, ".product_price .availability")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_price .price_color")
+    PRODUCT_RATING = (By.CSS_SELECTOR, ".star-rating")
+    ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, ".product_price button")
+
+    ADD_TO_BASKET_MESSAGE = (By.CSS_SELECTOR, ".alertinner > strong")
+
+    LINK_TO_CLOTHING = (By.CSS_SELECTOR, "[href='/ru/catalogue/category/clothing_1/']")
+    LINK_TO_BOOKS = (By.CSS_SELECTOR, "[href='/ru/catalogue/category/books_2/']")
+    LINK_TO_FICTION = (By.CSS_SELECTOR, "[href='/ru/catalogue/category/books/fiction_3/']")
+    LINK_TO_COMPUTERS_IN_LIT = (
+        By.CSS_SELECTOR, "[href='/ru/catalogue/category/books/fiction/computers-in-literature_4/']")
+    LINK_TO_NON_FICTION = (By.CSS_SELECTOR, ".nav-list > [href='/ru/catalogue/category/books/non-fiction_5/']")
+    LINK_TO_ESSENTIAL_PROG = (
+        By.CSS_SELECTOR, "[href='/ru/catalogue/category/books/non-fiction/essential-programming_6/']")
+    LINK_TO_HACKING = (By.CSS_SELECTOR, "[href='/ru/catalogue/category/books/non-fiction/hacking_7/']")

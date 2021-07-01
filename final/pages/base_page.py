@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from .locators import BasePageLocators
+from final.pages.locators import BasePageLocators
 
 
 class BasePage:
@@ -66,13 +66,13 @@ class BasePage:
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
                                                                      " probably unauthorised user"
 
-    def should_be_empty_field(self, locator):
+    def should_be_empty_field(self, how, what):
         # noinspection PyArgumentList
-        assert self.is_empty_field(locator), f"The {locator} field is not empty"
+        assert self.is_empty_field(how, what), f"The {how, what} field is not empty"
 
-    def should_be_filled_field(self, locator, value):
+    def should_be_filled_field(self, how, what, value):
         # noinspection PyArgumentList
-        assert self.is_filled_field(locator, value), f"The {locator} field is not filled"
+        assert self.is_filled_field(how, what, value), f"The {how, what} field is not filled"
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"

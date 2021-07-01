@@ -39,4 +39,4 @@ def language(request):
 
 @pytest.fixture(scope="session")
 def browser_name(request):
-    return request.config.getoption("browser")
+    return request.config.getoption("browser_name")

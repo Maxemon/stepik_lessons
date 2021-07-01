@@ -1,5 +1,5 @@
-from .base_page import BasePage
-from .locators import LoginPageLocators
+from final.pages.base_page import BasePage
+from final.pages.locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
@@ -36,8 +36,7 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_BUTTON), "No reg button on registration form"
 
     def should_be_success_login_message(self):
-        assert self.is_element_present(*LoginPageLocators.SUCCESS_LOGIN_MESSAGE,
-                                       "No success message about login")
+        assert self.is_element_present(*LoginPageLocators.SUCCESS_LOGIN_MESSAGE), "No success message about login"
 
     def should_be_email_warning_message(self):
         assert self.is_element_present(
